@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Q3 2nd Graded Exercise">
+    <meta name="keywords" content="HTML Forms">
+    <meta name="author" content="Nathan Cabanero">
+    <title>Sample Form</title>
+    <!-- updated external css link to show how to share it between repository -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="icon" href="../../assets/pshslogo.png" sizes="32x32" type="image/png">
+    <script src="script.js" defer></script>
+   <style>
+    body{
+        padding: 25px;
+        font-family: arial;
+        width: 80%;
+        margin-left: 10%;
+        }
+
+        .title {
+            color: #5C6AC4;
+        }
+
+        fieldset:nth-child(2) {
+             margin-top: 20px;
+        }
+
+        legend {
+            background: rgb(255, 255, 255);
+            color: rgb(55, 74, 247);
+            padding: 5px;
+        }
+        label {
+             margin: 5%;
+        }
+    </style>
+  </head>
+  <body>
+     <header>
+        <div>
+            <img src="https://th.bing.com/th/id/OIP.RqsySRlcflHNqHyd0uecuAHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" alt="pshs logo" 
+               title="The Official Logo" width="50px" height="50px" />
+            <h1>
+                HTML FORM        
+            </h1>
+            <h3>by The Napc</h3>
+        </div>
+        <nav class="navbar">
+            <a href="../../index.html"> Home </a>
+            <a href="registered.html"> Show Saved Accounts </a>
+        </nav>
+    </header>
+    <section>
+      <h1 class="title">Sign-up Page</h1>
+      <form id="dForm" action="registered.html" method="get">
+        <fieldset>
+          <legend>Your Credentials</legend><br/>
+          <label for="studentId">Student ID:
+        <input 
+            type="number" 
+            id="studentId" 
+            name="studentId" 
+            min="1" 
+            step="1" 
+            required 
+            placeholder="Enter your ID">
+        </label>
+        <br><br>
+          <label> Username: 
+            <input type="text" name="uname" id="uname" required />
+          </label><br/><br/>
+          <label> Password :
+            <input type="password" name="pword" id="pword" required />
+          </label><br/><br/>
+          <label> Date Of Birth :
+            <input type="date" name="dob" id="dob" />
+          </label><br/><br/>
+          <label for="email">Email Address:
+        <input type="email" id="email" name="email" 
+               placeholder="example@domain.com" 
+               required>
+            </label>
+        <br><br>
+        <label> Mobile Number: 
+            <input type="text" name="MNumber" id="MNumber" required />
+          </label><br/><br/>
+          <label> Gender :
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Not Say" /> Prefer Not to Say
+          </label><br/><br/>
+          <label> 
+            <input type="checkbox" name="dp" id="dp" value="true" /> 
+            Agree to Data Privacy Policy
+          </label><br/><br/>
+          <label> Tell Us About Yourself : 
+            <textarea name="about" id="about">
+              
+            </textarea>
+          </label><br/><br/>
+          <label> School Name : 
+            <textarea name="School" id="School">
+              
+            </textarea>
+          </label><br/><br/>
+          <label>Grade Level: 
+          <select id="grade" name="grade" required>
+            <option value="">-- Select a grade --</option> 
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>                            
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            
+        </select>
+        </label>
+        <br/><br/>
+        <label>Are you an Intern or an Extern?:
+            <br>
+    <label>
+        <input type="radio" name="I/E" value="Intern" required>
+        Intern
+    </label><br>
+    <label>
+        <input type="radio" name="I/E" value="Extern">
+        Extern
+    </label><br><br>
+        </label>
+
+        <label>Favorite Subject : 
+            <select id="Subject" name="Subject" required>
+              <option value="">-- Choose the subject --</option> 
+              <option value="1">Math</option>
+              <option value="2">Science</option>
+              <option value="3">Physical Education</option>                            
+              <option value="4">English</option>
+              <option value="5">Filipino</option>
+              <option value="6">Health</option>
+              <option value="7">Music</option>
+              <option value="8">Values Education</option>
+              <option value="9">Music</option>
+              
+              
+          </select>
+          </label>
+          <br/><br/>
+
+          <label>Preferred Club/Organization: 
+            <select id="Subject" name="Subject" required>
+              <option value="">-- Choose the club --</option> 
+              <option value="1">Alianti</option>
+              <option value="2">Math Club</option>
+              <option value="3">Model United Nations</option>                            
+              <option value="4">Kislap</option>
+              <option value="5">Exposure</option>
+              <option value="6">Likha</option>
+              <option value="7">Sightlines</option>
+              <option value="8">XYZ</option>
+              <option value="9">Other</option>
+              
+              
+          </select>
+          </label>
+          <br/><br/>  
+          <label for="reason">Why do you want to join?<br>
+           <label> <textarea id="reason" name="reason" rows="5" cols="30" placeholder="Type your reason here..." required></textarea></label>
+          </label> <br><br>
+        <input type="submit" value="Submit">
+
+        </fieldset>  
+        <fieldset>
+          <legend>Action Buttons</legend>
+          <button type="submit"> Accept </button>
+          <input type="reset" value=" Clear " />
+        </fieldset> 
+      </form>
+    </section>
+    <script src="q3e3script.js"></script>
+  </body>
+</html>
